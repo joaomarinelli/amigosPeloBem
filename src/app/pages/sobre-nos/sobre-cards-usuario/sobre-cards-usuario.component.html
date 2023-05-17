@@ -1,0 +1,27 @@
+<div class="row ">
+
+  <div class="container box ">
+    <div class="row justify-content-center">
+      <div class="col-12">
+          <h1 class="text-center m-4 text-nosso-time">Nosso Time</h1>
+      </div>
+      <div class="col-auto " *ngFor="let usuario of usuarios">
+        <div class="card m-3 shadow bg-body rounded" style="width: 250px;"  >
+            <img [src]="usuario.avatar" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{usuario.nome}}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Data Nascimento: <small class="text-muted">{{usuario.dataDeNascimento}}</small></li>
+              <li class="list-group-item">Cidade: <small class="text-muted">{{usuario.cidadeOndeMora}}</small></li>
+              <li class="list-group-item">Tipo Sanguineo: <Small class="text-muted">{{usuario.tipoSanguineo[0]}}</Small></li>
+              <button type="button" class="btn btn-primary btn-rosa" data-bs-toggle="modal" data-bs-target="#exampleModalCard" data-bs-whatever="@mdo" (click)="navegarPara(['sobre-nos', 'update', usuario.id])">Editar</button>
+            </ul>
+        </div>
+      </div>
+      <div class="card m-3  rounded  add" style="width: 250px;" >
+        <button class="btnAdd" (click)="navegarPara(['sobre-nos', 'update'])"><i class="fa fa-solid fa-plus"></i></button>
+      </div>
+    </div>
+  </div>
+</div>

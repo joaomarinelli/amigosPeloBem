@@ -1,0 +1,26 @@
+@import "src/styles";
+
+img{
+  max-width: 130px;
+}
+
+.usuario{
+  width: 130px;
+}
+
+.container{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.border{
+  border: 1px solid $main-color!important;
+}
+
+::ng-deep .mat-ink-bar{
+  background-color: $main-color !important;
+}
+
+::ng-deep .mat-tab-body{
+  z-index: 0 !important;
+}

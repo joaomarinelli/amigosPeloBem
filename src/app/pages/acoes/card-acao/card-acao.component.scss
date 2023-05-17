@@ -1,0 +1,20 @@
+@import "src/styles";
+
+.border{
+    border: 1px solid $main-color !important
+  }
+
+.card{
+    box-shadow: 1px 1px 10px;
+    border-radius: 15px;
+    // max-width: 90%;
+    // margin: 0px 15px 0px 15px;
+    max-width: 35rem;
+    width: 100%;
+  }
+
+.card:hover{
+    box-shadow: -1px 2px 5px;
+    transform: scale(1.01) !important;
+    transition: all .3s;
+}

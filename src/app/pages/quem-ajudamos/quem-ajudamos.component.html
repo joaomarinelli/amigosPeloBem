@@ -1,0 +1,40 @@
+
+<div class="d-flex justify-content-center">
+  <div class="div-tituloebotoes">
+    <h1 class="mt-5 text-center"> Quem Ajudamos? </h1>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center flex-wrap ml-5 mr-5">
+  <div class="card m-3 cardinteiro" style="width: 16rem;" *ngFor="let pessoa of pessoas">
+    <div class="d-flex justify-content-center ">
+      <img [src]="pessoa?.foto ? pessoa?.foto : '/assets/imgs/person.png'" class="card-img-top mt-3 div-img-foto" alt="Foto de uma pessoa">
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title text-center">{{pessoa?.nome}}</h5>
+    </div>
+
+    <ul class="list-group list-group-flush">
+
+      <li class="list-group-item">Documento: {{pessoa?.cpf  ?  pessoa.cpf  :  "N/I"}}</li>
+
+      <li class="list-group-item">Data de Nascimento: {{pessoa?.dataNascimento? getDateBr(pessoa.dataNascimento) :"N/I"}}</li>
+      <li class="list-group-item">Contato: {{pessoa?.contato?pessoa.contato:"N/I"}}</li>
+      <li class="list-group-item">Tipo Sanguíneo: {{pessoa?.tipoSanguineo?pessoa.tipoSanguineo:"N/I"}}</li>
+      <li class="list-group-item">Cidade Natal: {{pessoa?.cidadeOrigem?pessoa.cidadeOrigem:"N/I"}}</li>
+      <li class="list-group-item">Local onde vive: {{pessoa?.localOndeViveMaps  ?  pessoa.localOndeViveMaps  :  "N/I"}}</li>
+      <!-- <li class="list-group-item">Local onde vive: {{verificaSeContemDados(pessoa.localOndeViveMaps) }}</li> -->
+    </ul>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Familiares: {{pessoa?.familiares&&pessoa.familiares.length>0?pessoa.familiares[0].nome:"N/I"}}</li>
+    </ul>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Situação: {{pessoa?.situacaoPessoa?pessoa.situacaoPessoa:"N/I"}}</li>
+    </ul>
+
+  </div>
+
+</div>

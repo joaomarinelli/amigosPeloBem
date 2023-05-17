@@ -1,0 +1,8 @@
+<div class="card border mb-3">
+    <div class="card-header bg-transparent">{{acao?.dataEHora? getDateBr(acao.dataEHora) : "N/I"}}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{acao?.nome}}</h5>
+      <p class="card-text">{{acao?.descricao}}</p>
+    </div>
+    <div class="card-footer bg-transparent ">Cardápio: {{acao && acao.cardapio && acao.cardapio.nome ? acao.cardapio.nome : "N/I"}}</div>
+  </div>

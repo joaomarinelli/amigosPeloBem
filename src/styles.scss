@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+$main-color: #ee8bbe;
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f0d2f540 !important;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.div-tituloebotoes{
+  background-color: white;
+  border-style: solid ;
+  border-width: 0px 1px 1px 1px;
+  border-color: $main-color;
+  // padding: 10px 0px;
+  border-radius: 0px 0px 15px 15px;
+  width: 100%;
+  margin: 0px 3rem 0px 3rem;
+}

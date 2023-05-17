@@ -1,0 +1,58 @@
+.imagens-fundo-0{
+  top: 90px;
+  z-index: -1;
+  transform: rotate(344deg);
+  margin-right: 60%;
+}
+
+.imagens-fundo-1{
+  top: 200px;
+  right: 30px;
+  transform: rotate(13deg);
+  margin-left: 50%;
+}
+
+.imagens-fundo-2{
+  top: 440px;
+  z-index: -1;
+  transform: rotate(344deg);
+  margin-right: 60%;
+}
+
+.imagens-fundo-3{
+  top: 550px;
+  right: 30px;
+  transform: rotate(13deg);
+  margin-left: 50%;
+}
+
+.imagens-fundo-4{
+  top: 770px;
+  z-index: -1;
+  transform: rotate(344deg);
+  margin-right: 60%;
+}
+
+.div-img{
+  position: fixed;
+  z-index: -1;
+  max-width: 250px;
+  // max-height: 500px;
+  opacity: 60%;
+  border-radius: 1%;
+  background-color: white;
+  padding: 1%;
+  padding-bottom: 4%;
+  box-shadow: -12px 0px 45px 0px;
+}
+
+img{
+  width: 100%;
+  max-height: 230px;
+}
+
+app-footer-public{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}

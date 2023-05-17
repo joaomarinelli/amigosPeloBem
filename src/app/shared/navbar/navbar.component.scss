@@ -1,0 +1,132 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  height: 80px;
+  box-shadow: 0px 10px 10px 1px #aaa;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+/*
+section{
+  // background-color: red;
+}
+*/
+ul {
+  list-style: none;
+}
+
+.menu {
+  padding-right: 50px;
+  height: 100%;
+  width: 75%;
+  max-width: 520px;
+}
+
+.item-menu {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.item-menu:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.hamburger {
+  position: relative;
+  width: 35px;
+  z-index: 1;
+}
+
+.linha {
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.linha-1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.linha-2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.linha-3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.menu-mobile {
+  /* display: none; */
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 5px 5px;
+  opacity: 0;
+  height: 232px;
+  width: 150px;
+  background-color: #363636;
+  position: absolute;
+  top: 48px;
+  right: -50px;
+  transition: all 0.7s ease-in-out;
+}
+
+.menu-mobile .item-menu:hover {
+  background-color: transparent;
+  color: rgb(255, 208, 0);
+}
+
+input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+input[type="checkbox"] {
+  width: 8%;
+  height: 70%;
+  opacity: 0%;
+  z-index: 1;
+}
+
+input[type="checkbox"]:checked ~ .menu-mobile {
+  /* display: block; */
+  opacity: 1;
+  transform: translateY(6px);
+}
+
+input[type="checkbox"]:checked ~ .linha-1 {
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked ~ .linha-2 {
+  transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ .linha-3 {
+  transform: rotate(-45deg);
+}

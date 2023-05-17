@@ -1,0 +1,33 @@
+@import "src/styles";
+
+.carousel-item{
+    background: rgba(65, 22, 221, 0.1);
+
+}
+.carousel-inner img{
+    height: 100%;
+    width: 100%;
+
+}
+.btn-rosa{
+    background-color: $main-color !important;
+    border: 0px;
+}
+.btn-rosa:hover{
+    background-color: white !important;
+    color: $main-color;
+}
+
+h1, p{
+    color: white;
+    color: $main-color
+
+}
+p{
+    font-size: 25px;
+    color: $main-color
+}
+.visually-hidden{
+    color: $main-color !important;
+}
+

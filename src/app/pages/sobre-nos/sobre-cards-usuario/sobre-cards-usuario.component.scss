@@ -1,0 +1,35 @@
+@import "src/styles";
+
+.btn-rosa{
+    background-color: $main-color !important;
+    padding: 7px;
+    border: 0px;
+}
+.btn-rosa:hover{
+    background-color: white !important;
+    color: $main-color;
+
+}
+.fa{
+    font-size: 200px;
+
+    color: $main-color;
+    cursor: pointer;
+}
+.btnAdd{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.box{
+    margin-bottom: 80px;
+}
+.text-nosso-time{
+    color: $main-color;
+    font-size: 50px;
+}
+.add{
+    background-color: transparent;
+    border: 0;
+}

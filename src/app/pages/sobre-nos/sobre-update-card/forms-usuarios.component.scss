@@ -1,0 +1,18 @@
+@import "src/styles";
+
+.titulo{
+    color: $main-color;
+}
+.box{
+    padding: 25px;
+    border: 1px solid $main-color;
+    border-radius: 15px;
+    margin-bottom: 58px;
+    margin-top: 50px;
+}
+.form-label{
+    color: $main-color;
+}
+.btn{
+    margin-right: 5px;
+}

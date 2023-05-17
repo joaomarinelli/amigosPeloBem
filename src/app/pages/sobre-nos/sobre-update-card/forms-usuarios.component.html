@@ -1,0 +1,40 @@
+
+<div class="conatiner bg-white box">
+  <h1 class="titulo">{{ usuario && usuario?.id ? 'Edição' : 'Cadastro' }}</h1>
+  <form class="row g-3">
+    <div class="col-md-2">
+      <label for="id" class="form-label">ID:</label>
+      <input type="text" class="form-control"  [(ngModel)]="usuario.id"  id="id" name="id" disabled>
+    </div>
+    <div class="col-md-10">
+      <label for="tiposanguineo" class="form-label">Tipo Sanguineo:</label>
+      <select class="form-select" aria-label="Default select example" id="tiposanguineo" [(ngModel)]="usuario.tipoSanguineo"  name="tipoSanguineo">
+        <option selected></option>
+        <option value="A+">A+</option>
+        <option value="B+">B+</option>
+        <option value="AB+">AB+</option>
+        <option value="O+">O+</option>
+        <option value="A+">A-</option>
+        <option value="B-">B-</option>
+      </select>
+    </div>
+    <div class="col-md-12">
+      <label for="nome" class="form-label">Nome:</label>
+      <input type="text" class="form-control" [(ngModel)]="usuario.nome" id="nome" name="nome">
+    </div>
+    <div class="col-6">
+      <label for="datanascimento" class="form-label">Data Nascimento:</label>
+      <input type="text" class="form-control" id="datanascimento" [(ngModel)]="usuario.dataDeNascimento"  name="dataDeNascimento">
+    </div>
+    <div class="col-6">
+      <label for="cidade" class="form-label">Cidade:</label>
+      <input type="text" class="form-control" id="cidade" [(ngModel)]="usuario.cidadeOndeMora"  name="cidadeOndeMora">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success" (click)="insertUsuario()" *ngIf="!usuario || !usuario.id">salvar</button>
+      <button type="submit" class="btn btn-warning" (click)="updateUsuario()" *ngIf="usuario.id"><i class="fa fa-refresh"></i> Atualizar</button>
+      <button type="submit" class="btn btn-danger" (click)="deleteUsuario()" *ngIf="usuario.id">Deletar</button>
+      <button type="submit" class="btn btn-primary" (click)="cancel()">Voltar</button>
+    </div>
+  </form>
+</div>

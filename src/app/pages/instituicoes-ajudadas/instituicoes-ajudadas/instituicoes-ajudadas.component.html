@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+    <div class="div-tituloebotoes">
+      <h1 class="text-center mt-5"> Instituições Ajudadas </h1>
+            </div>
+  </div>
+  
+  
+    <div class="d-flex flex-column align-items-center mt-5 ml-2 mr-2">
+      <mat-card *ngFor="let instituicao of instituicoes " class="example-card mb-5 ">
+        <mat-card-header class="d-flex justify-content-center">
+          <mat-card-title class="text-center">{{instituicao?.nome}}</mat-card-title>
+        </mat-card-header>
+        <!-- <img mat-card-image src="{{publicacao?.foto}}"> -->
+        <mat-card-content class=" text-center gap-4 align-items-center">
+          <p>
+            {{instituicao?.descricao}}
+            
+          </p>
+          <p>
+            {{instituicao?.cnpj}}
+          </p>
+          <!-- <div class="curtida">
+            <span class="material-symbols-outlined">
+              favorite
+            </span>
+            <div>
+              <p class="curtidas">{{publicacao?.quantidadeApoios}}</p>
+                         </div>
+          </div> -->
+  
+        </mat-card-content>
+        <!-- <mat-card-actions>
+          <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+        </mat-card-actions> -->
+      </mat-card>
+  
+  

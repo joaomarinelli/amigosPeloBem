@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center">
+  <div class="div-tituloebotoes">
+    <h1 class="mt-5 text-center">Ajudas e Doações</h1>
+  </div>
+</div>
+
+<div class=" ml-5 mr-5 card-info-pix mt-5">
+  <div class="d-flex justify-content-around flex-wrap p-4">
+    <div class="d-flex flex-column align-items-center m-3 div-infos-pix">
+
+      <div class="text-center mt-auto">
+        <h5 class="font-weight-bold">Banco:</h5>
+        <p>335 - Banco Digio S.A.</p>
+      </div>
+
+      <div class="text-center">
+        <h5 class="font-weight-bold">Chave Pix</h5>
+        <div id="chave-pix">admin@amigospelobem.com.br</div>
+      </div>
+
+      <button class="btn btn-success mb-auto mt-3" (click)="copiarChavePix()">{{textoBotaoCopiar}}</button>
+    </div>
+    <div>
+      <img src="/assets/pix/qr-code-pix-apb.jpeg">
+    </div>
+  </div>
+</div>
+
+<div class=" ml-5 mr-5 card-info-pix mt-5 mb-5">
+  <div class="d-flex justify-content-around flex-wrap p-4">
+    <div class="d-flex flex-column align-items-center m-3 div-infos-pix">
+      <h5 class="mt-auto  font-weight-bold">Agendar Coleta</h5>
+      <p class="mb-auto text-center">Nos contate para agendar a coleta de doações físicas!</p>
+      <!-- <p class="texto-pix font-weight-bold">Chave Pix: admin@amigospelobem.com.br</p> -->
+
+
+    </div>
+    <div class="d-flex flex-column align-items-center" style="width: 100%; max-width: 280px;">
+      <button type="button" class="btn button-email btn-lg btn-block mt-auto" (click)="abrirEmail()">Email</button>
+      <button type="button" class="btn button-instagram btn-lg btn-block mb-auto" (click)="abrirInstagram()">Instagram</button>
+    </div>
+  </div>
+</div>

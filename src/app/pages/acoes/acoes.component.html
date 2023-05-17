@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="div-tituloebotoes">
+    <h1 class="mt-5 text-center"> Ações </h1>
+  </div>
+</div>
+<div class="container">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Futuras" >
+      <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <app-card-acao [acao]="acao1" *ngFor="let acao1 of acoes">
+          <!-- <div class="card-header bg-transparent">{{acao?.dataEHora? getDateBr(acao.dataEHora) : "N/I"}}</div>
+          <div class="card-body">
+            <h5 class="card-title">{{acao?.nome}}</h5>
+            <p class="card-text">{{acao?.descricao}}</p>
+          </div>
+          <div class="card-footer bg-transparent ">Cardápio: {{acao && acao.cardapio && acao.cardapio.nome ? acao.cardapio.nome : "N/I"}}</div> -->
+        </app-card-acao>
+      </div>
+      </mat-tab>
+      <mat-tab label="Concluidas">
+        <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+            <app-card-acao [acao]="acao1" *ngFor="let acao1 of acoesConcluidas">
+
+            </app-card-acao>
+      <!-- <div class="card border mb-3" style="max-width: 18rem;" *ngFor="let acao of acoesConcluidas">
+          <div class="card-header bg-transparent ">{{acao?.dataEHora? getDateBr(acao.dataEHora) : "N/I"}}</div>
+          <div class="card-body">
+            <h5 class="card-title">{{acao?.nome}}</h5>
+            <p class="card-text">{{acao?.descricao}}</p>
+          </div>
+          <div class="card-footer bg-transparent ">Cardápio: {{acao && acao.cardapio && acao.cardapio.nome ? acao.cardapio.nome : "N/I"}}</div>
+        </div> -->
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,42 @@
+
+
+
+<div class="d-flex justify-content-center">
+  <div class="div-tituloebotoes">
+    <h1 class="text-center mt-5"> Publicações </h1>
+    <div class="d-flex flex-wrap justify-content-center align-items-center mt-3 gap-5 mb-3">
+      <button mat-button (click)="ordernarRecenteParaAntigo()">Recente</button>
+      <button mat-button (click)="ordernarAntigoParaRecente()">Antigo</button>
+      <button mat-button>Adicionar</button>
+    </div>
+  </div>
+</div>
+
+
+  <div class="d-flex flex-column align-items-center mt-5 ml-2 mr-2">
+    <mat-card *ngFor="let publicacao of publicacoes " class="example-card mb-5 ">
+      <mat-card-header class="d-flex justify-content-center">
+        <mat-card-title class="text-center" [title]="publicacao?.titulo">{{publicacao?.titulo}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [alt]="publicacao?.titulo" [title]="publicacao?.titulo" src="{{publicacao?.foto}}">
+      <mat-card-content class="d-flex justify-content-between gap-4 align-items-center">
+        <p>
+          {{publicacao?.descricao}}
+        </p>
+        <div class="curtida">
+          <span class="material-symbols-outlined">
+            favorite
+          </span>
+          <div>
+            <p class="curtidas">{{publicacao?.quantidadeApoios}}</p>
+            <!-- <p>Curtidas</p> -->
+          </div>
+        </div>
+
+      </mat-card-content>
+      <!-- <mat-card-actions>
+        <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+      </mat-card-actions> -->
+    </mat-card>
+

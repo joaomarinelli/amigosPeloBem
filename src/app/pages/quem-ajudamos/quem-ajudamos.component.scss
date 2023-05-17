@@ -1,0 +1,31 @@
+img{
+  max-width: 130px;
+  // max-height: 130px;
+  width: 100%;
+  // height: 100%;
+  border-radius: 30%;
+}
+
+.usuario{
+  width: 130px;
+}
+
+// .container{
+//   padding-left: 5%;
+//   padding-right: 5%;
+// }
+
+.card{
+  box-shadow: -1px 2px 5px;
+}
+
+.cardinteiro:hover{
+  box-shadow: -1px 2px 5px;
+  transform: scale(1.01);
+  transition: all .3s;
+}
+
+.div-img-foto{
+  width: 100%;
+  max-width: 130px;
+}

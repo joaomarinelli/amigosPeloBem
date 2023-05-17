@@ -1,0 +1,37 @@
+<app-navbar-public></app-navbar-public>
+
+
+<div class="d-flex justify-content-center" >
+  <div style="width: 100%; max-width: 1010px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<!-- <div *ngIf="fotosFundo && fotosFundo.length == 5"> -->
+<div *ngIf="fotosFundo">
+
+  <!-- <div class="imagens-fundo-{{i}} div-img"  *ngFor="let foto of fotosFundo; index as i" >
+    <img src="{{foto}}">
+  </div> -->
+
+  <div class="imagens-fundo-0 div-img">
+    <img src="assets/acoes/cachorro-quente-APB-09102022.jpg">
+  </div>
+
+  <div class="imagens-fundo-1 div-img">
+    <img src="assets/acoes/cachorro-quente-APB-18072021.jpg">
+  </div>
+
+  <div class="imagens-fundo-2 div-img">
+    <img src="assets/acoes/entrega-APB-13112022.jpg">
+  </div>
+
+  <div class="imagens-fundo-3 div-img">
+    <img src="assets/acoes/galinhada-APB-24052022.jpg">
+  </div>
+
+</div>
+
+
+  <app-footer-public></app-footer-public>

@@ -1,0 +1,50 @@
+<div class="m-5">
+
+  <h1 class="m-5 text-center"> FORMS </h1>
+
+
+  <form class="m-5" [formGroup]="form"  (ngSubmit)="salvaForm()">
+
+    <input class="m-5" type="text" formControlName="id" placeholder="Id" disabled>
+    <input class="m-5" type="text" formControlName="name" placeholder="Nome">
+    <input class="m-5" type="text" formControlName="avatar" placeholder="Avatar">
+
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Toppings</mat-label>
+      <mat-select [formControl]="controleDeFormDosusuariosSelecionadosDaLista" multiple>
+        <mat-select-trigger>
+          {{controleDeFormDosusuariosSelecionadosDaLista.value[0]?.name || ''}}
+          <span *ngIf="(controleDeFormDosusuariosSelecionadosDaLista.value?.length || 0) > 1" class="example-additional-selection">
+            (+{{(controleDeFormDosusuariosSelecionadosDaLista.value?.length || 0) - 1}} {{controleDeFormDosusuariosSelecionadosDaLista.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let usuario of usuariosList" [value]="usuario">{{usuario.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+
+
+
+
+    <button type="submit"  class="ml-2 mb-3 btn btn-primary btn-round">Salvar</button>
+    <button type="reset"  class="ml-2 mb-3 btn btn-primary btn-round">Resetar</button>
+
+  </form>
+
+
+  <h1 class="m-5 text-center"> USUARIOS </h1>
+
+  <div class="d-flex justify-content-between flex-wrap">
+    <div class="mt-2 border usuario" *ngFor="let usuario of usuarios" (click)="carregarUsuarioNoForm(usuario)">
+      <img src="{{usuario.avatar}}">
+      <p>Nome: {{usuario?.name}}</p>
+    </div>
+  </div>
+
+
+
+
+</div>
